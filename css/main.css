@@ -236,7 +236,7 @@ hr {
 }
 
 .modul {
-    overflow: auto;
+    overflow: scroll;
     color: white;
     z-index: 2;
     position: absolute;
@@ -550,9 +550,11 @@ hr {
      max-width:400px;
       flex-direction: column;
       min-width:350px;
+      height: 0;
+      right:0;
     }
     .fixed-button{
-        right: 110px;
+        right: 80px;
         bottom: 175px;
     }
 
