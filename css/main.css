@@ -272,7 +272,6 @@ hr {
     overflow: auto;
     min-width: 360px;
     align-items: center;
-
 }
 
 .confirmation-title {
@@ -300,7 +299,6 @@ hr {
     margin-right: 10px;
 }
 
-.meal-info {}
 
 .meal-name {
     font-weight: 500;
@@ -455,8 +453,6 @@ hr {
     border-radius: 8px;
 }
 
-.card-extra-info {}
-
 .expiration-date input,
 .CVV input {
     width: 98%;
@@ -545,3 +541,25 @@ hr {
     box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.4);
     color: white;
 }
+
+
+/* ------------ */
+
+@media only screen and (max-width: 500px){
+    .modul {
+     max-width:400px;
+      flex-direction: column;
+      min-width:350px;
+    }
+    .fixed-button{
+        right: 110px;
+        bottom: 175px;
+    }
+
+    .nav-item::after{
+        top:55px;
+    }
+    .toolbar{
+        flex-direction: column;
+    }
+};
