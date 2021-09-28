@@ -1,0 +1,547 @@
+@import url(./style.css);
+@import url(./style2.css);
+
+body {
+    box-sizing: border-box;
+    margin: 50px auto;
+    font-family: 'Barlow', sans-serif;
+}
+
+.container {
+    background-color: #252836;
+    border-radius: 16px;
+    padding: 24px 55px;
+    position: relative;
+}
+
+.navbar-nav {
+    flex-direction: row;
+}
+
+.toolbar {
+    margin-bottom: 24px;
+}
+
+.toolbar__title {
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 140%;
+    color: #FFFFFF;
+}
+
+.toolbar__date {
+    font-size: 16px;
+    line-height: 140%;
+    color: #E0E6E9;
+}
+
+.toolbar__form {
+    position: relative;
+    background: #2D303E;
+    border: 1px solid #393C49;
+    box-sizing: border-box;
+    border-radius: 8px;
+    height: 50px;
+}
+
+.icon-search {
+    vertical-align: middle;
+    color: white;
+    position: absolute;
+    top: 18px;
+    left: 15px;
+}
+
+.form-control {
+    background: transparent;
+    border: 1px solid #393C49;
+    box-sizing: border-box;
+    border-radius: 8px;
+    width: 235px;
+    padding: 14px 14px 14px 42px;
+    font-size: 14px;
+    line-height: 20px;
+    color: #ABBBC2;
+    outline: none;
+
+}
+
+.form-control:focus {
+    background-color: transparent !important;
+    color: white;
+}
+
+.form-control::placeholder {
+    color: #ABBBC2;
+}
+
+.nav-item {
+    margin-right: 32px;
+    position: relative;
+}
+
+.activee {
+    color: #EA7C69;
+    font-weight: 600;
+    font-size: 14px;
+    line-height: 20px;
+}
+
+.nav-item::after {
+    content: '';
+    position: absolute;
+    background-color: #EA7C69;
+    width: 30px;
+    height: 3px;
+    display: block;
+    top: 40px;
+    transition: transform 0.3s ease-in-out;
+    transform: scale(0);
+}
+
+.nav-item:hover::after {
+    transform: scale(1);
+}
+
+.nav-link {
+    color: #FFFFFF;
+}
+
+.nav-link:hover,
+.nav-link:focus {
+    color: #EA7C69;
+}
+
+hr {
+    margin-top: 3px;
+    margin-bottom: 34px;
+    border: 1px solid #393C49;
+}
+
+.menu {
+    margin-bottom: 100px;
+}
+
+.menu__sub-title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    color: #FFFFFF;
+}
+
+.menu__select {
+    background: #1F1D2B;
+    border: 1px solid #393C49;
+    border-radius: 8px;
+    padding: 14px;
+    width: 171.84px;
+    color: #FFFFFF;
+}
+
+#mealTable {
+    justify-content: center;
+}
+
+.dishes-info {
+    min-width: 175px;
+    margin-bottom: 75px;
+    position: relative;
+    text-align: center;
+    padding: 24px;
+    background: #1F1D2B;
+    border-radius: 16px;
+    margin-left: 14px;
+    margin-right: 14px;
+}
+
+.dishes-info__img {
+    border-radius: 50%;
+    width: 132px;
+    height: 132px;
+    position: absolute;
+    left: 50%;
+    top: -66px;
+    transform: translate(-50%);
+}
+
+.dishes-info__mealname {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #FFFFFF;
+    margin-top: 70px;
+    min-height: 70px;
+}
+
+.dishes-info__price {
+    font-size: 14px;
+    line-height: 20px;
+    color: #ABBBC2;
+}
+
+.dishes-info__extra {
+    font-size: 14px;
+    line-height: 20px;
+    color: #ABBBC2;
+    margin: 0;
+}
+
+/* ----------------------------- */
+
+.arrow-back{
+    background: transparent;
+    border: none;
+}
+.circle-span {
+    background-color: rgba(196, 196, 196, 1);
+    border-radius: 50%;
+    width: 4px;
+    height: 4px;
+    margin: 5px;
+}
+
+.price-bowl-div {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    margin: 26px 10px;
+}
+
+.fixed-button {
+    position: fixed;
+    cursor: pointer;
+    z-index: 3;
+    right: 50px;
+    bottom: 30px;
+    width: 65px;
+    height: 65px;
+    border-radius: 50%;
+    background: #EA7C69;
+    border: none;
+    display: block;
+    color: white;
+    font-weight: 900;
+    font-size:25px;
+}
+
+.modul-bg {
+    display: none;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.7);
+    position: fixed;
+    z-index: 5;
+}
+
+.modul {
+    overflow: auto;
+    color: white;
+    z-index: 2;
+    position: absolute;
+    min-width: 814px;
+    height: 100vh;
+    right: 130px;
+    background: #1F1D2B;
+    border-radius: 16px 16px 0px 16px;
+}
+
+.add-to-cart {
+    background: #50343A;
+    border-radius: 0px 0px 8px 8px;
+    color: rgba(234, 124, 105, 1);
+    display: block;
+    font-style: 14px;
+    font-weight: 600;
+    line-height: 20px;
+    width: 100%;
+    border: none;
+    padding: 8px 10px;
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+/* CONFIRMATION BOX */
+.confirmation {
+    padding: 24px;
+}
+
+.confirm-box {
+    overflow: auto;
+    min-width: 360px;
+    align-items: center;
+
+}
+
+.confirmation-title {
+    margin-bottom: 48px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 39px;
+}
+
+.confirm-items-box {
+    margin-bottom: 5px;
+    align-items: center;
+    display: flex !important;
+    justify-content: space-between !important;
+}
+
+.info {
+    align-items: center;
+}
+
+.modul-img {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    margin-right: 10px;
+}
+
+.meal-info {}
+
+.meal-name {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 3px;
+    width: 140px;
+}
+
+.meal-price {
+    font-weight: 500;
+    font-size: 12px;
+    line-height: 17px;
+    color: #ABBBC2;
+    margin: 0;
+}
+
+.delete-button {
+    padding: 5px 8px;
+    border: 1px solid #EA7C69;
+    text-align: center;
+    border-radius: 8px;
+}
+
+.icon-delete {
+    color: #EA7C69;
+}
+
+.subtotal {
+    font-size: 14px;
+    line-height: 20px;
+    color: #ABBBC2;
+}
+
+.subtotal-price {
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+/* PAYMENT BOX */
+
+.payment {
+    border-left: 1px solid #393C49;
+    padding: 24px;
+    color: #FFFFFF;
+}
+
+.payment-title {
+    margin: 0;
+    margin-top: 25px;
+    font-weight: 600;
+    font-size: 28px;
+    line-height: 39px;
+}
+
+.payment-p {
+    margin: 0;
+    margin-bottom: 26px;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 22px;
+    color: #ABBBC2;
+}
+
+hr {
+    margin: 0;
+    margin: 24px 0px;
+    border: 1px solid #393C49;
+}
+
+.payment-methods-box {
+    min-width: 360px;
+}
+
+.payment-methods-box__title {
+    font-weight: 600;
+    font-size: 20px;
+    line-height: 28px;
+    margin-bottom: 16px;
+}
+
+.payment-option {
+    margin-bottom: 16px;
+}
+
+.payment-option>div {
+    margin-right: 8px;
+    text-align: center;
+    border: 1px solid #ABBBC2;
+    border-radius: 8px;
+}
+
+.credit-card {
+    padding: 15px 16px 10px;
+    position: relative;
+}
+
+.checkmark {
+    display: none;
+}
+
+.checkmark {
+    position: absolute;
+    z-index: 5;
+    top: 5px;
+    right: 5px;
+    display: block;
+}
+
+.paypal {
+    padding: 13px 30px 5px;
+}
+
+.cash {
+    padding: 12px 35px 5px;
+}
+
+.payment-option>p {
+    margin: 0;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    color: #ABBBC2;
+}
+
+.card-user,
+.card-number {
+    margin-bottom: 16px;
+}
+
+.card-user label,
+.card-number label,
+.expiration-date label,
+.CVV label,
+.order-type label,
+.tabel-no label {
+    display: block;
+    font-weight: 500;
+    font-size: 14px;
+    line-height: 18px;
+    margin-bottom: 8px;
+}
+
+.card-user input,
+.card-number input {
+    width: 100%;
+    background: #2D303E;
+    color: #E0E6E9;
+    border: 1px solid #393C49;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.card-extra-info {}
+
+.expiration-date input,
+.CVV input {
+    width: 98%;
+    background: #2D303E;
+    color: #E0E6E9;
+    border: 1px solid #393C49;
+    padding: 14px;
+    border-radius: 8px;
+}
+
+.CVV {
+    position: relative;
+}
+
+.circles {
+    position: absolute;
+}
+
+.circles1 {
+    left: 20px;
+    bottom: 20px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.circles2 {
+    left: 35px;
+    bottom: 20px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.circles3 {
+    left: 50px;
+    bottom: 20px;
+    position: absolute;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background-color: white;
+}
+
+.table-no input {
+    margin-left: 13px;
+    width: 90%;
+    font-size: 14px;
+    line-height: 20px;
+    color: #E0E6E9;
+    padding: 14px 0 14px 10px;
+    background: #2D303E;
+    border: 1px solid #393C49;
+    box-sizing: border-box;
+    border-radius: 8px;
+}
+
+.table-no label{
+    margin-bottom: 8px;
+}
+.order {
+    margin-bottom: 70px;
+}
+
+.cancel {
+    margin-right: 13px;
+}
+
+.cancel,
+.confirm-payment {
+    border: 1px solid #EA7C69;
+    box-sizing: border-box;
+    border-radius: 8px;
+    color: #EA7C69;
+    padding: 8px 65px;
+    background: #1F1D2B;
+}
+
+.cancel:hover,
+.confirm-payment:hover {
+    background: #EA7C69;
+    box-shadow: 0px 8px 24px rgba(234, 124, 105, 0.4);
+    color: white;
+}

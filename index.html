@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kitchen</title>
+    <link href="https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,400;0,600;1,500&display=swap"
+        rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="css/main.css">
+</head>
+
+<body>
+    <div class="container ">
+        <div class=" toolbar d-flex justify-content-between">
+            <div>
+                <h1 class="toolbar__title">Soup Stock</h1>
+                <small class="toolbar__date">Tuesday, 2 Feb 2021</small>
+            </div>
+
+
+            <form class="toolbar__form" action="#">
+                <i class="icon-search"></i>
+                <input id = "search" class="form-control mr-sm-2" type="text" placeholder="Search for food, coffe, etc..">
+            </form>
+        </div>
+
+        <ul class="navbar-nav ">
+            <li class="nav-item activee">
+                <a class="nav-link" href="#" data-type='-1'>All</a>
+            </li>
+            <li class="nav-item ">
+                <a class="nav-link" href="#" data-type='0'>Hot Dishes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-type='1'>Cold Dishes</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-type='2'>Soup</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-type='3'>Grill</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-type='4'>Salads</a>
+            </li>
+            <li class="nav-item">
+                <a class="nav-link" href="#" data-type='5'>Deserts</a>
+            </li>
+        </ul>
+        <hr>
+
+
+        <div class=" menu d-flex justify-content-between">
+            <h2 class="menu__sub-title">Choose Dishes</h2>
+            <div class="menu__filter">
+                <select class=" menu__select" type="text" placeholder="Dine In">
+                    <option value="eatIn">Dine In</option>
+                    <option value="eatIn">Take away</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="row d-flex " id='mealTable'>
+        </div>
+
+        <button type='button' class="fixed-button"></button>
+    </div>
+
+    <!-- MODUL WINDOW -->
+    <div class="modul-bg">
+        <div class="modul d-flex">
+            <div class="confirmation col-lg-6">
+                <button class="arrow-back" type="button"><img src="images/Line.png" alt="arrow"></button>
+                <h1 class="confirmation-title">Confirmation</h1>
+                <hr>
+
+                <div class="confirm-box">
+                </div>
+
+                <hr>
+                <div class="subtotal-info d-flex justify-content-between">
+                    <span class="subtotal">Sub total</span>
+                    <span class="subtotal-price"> $0 </span>
+                </div>
+            </div>
+
+            <div class="payment col-lg-6">
+                <h1 class="payment-title">Payment</h1>
+                <p class="payment-p">3 payment method available</p>
+                <hr>
+
+                <div class="payment-methods-box">
+                    <h2 class="payment-methods-box__title">Payment Method</h2>
+
+                    <div class="payment-option d-flex justify-content-left">
+                        <div class="credit-card">
+                            <img src="images/Card.png" alt="">
+                            <p>Credit Card</p>
+                            <img  class= 'checkmark' src="images/checkmark-circle.png" alt="">
+                        </div>
+                        <div class="paypal">
+                            <img src="images/paypal.png" alt="">
+                            <p>PayPal</p>
+                        </div>
+                        <div class="cash">
+                            <img src="images/wallet.png" alt="">
+                            <p>Cash</p>
+                        </div>
+                    </div>
+
+                    <div class="card-user">
+                        <label for="name">Cardholder Name</label>
+                        <input type="text" class="card-user__input" placeholder="Levi Ackerman">
+                    </div>
+
+                    <div class="card-number">
+                        <label for="number">Card Number</label>
+                        <input type="number" class="card-number__input" placeholder="2564 1421 0897 1244">
+                    </div>
+
+                    <div class="card-extra-info d-flex justify-content-between">
+                        <div class="expiration-date">
+                            <label for="carDate">Expiration Date</label>
+                            <input type="date" class="expiration-date__input" placeholder="02/2022">
+                        </div>
+                        <div class="CVV">
+                            <label for="cvv">CVV</label>
+                            <input type="password" class="cvv__input" placeholder="">
+                            <div class="circles">
+                                <span class="circles1"></span>
+                                <span class="circles2"></span>
+                                <span class="circles3"></span>
+                            </div>
+                        </div>
+                    </div>
+                    <hr>
+
+                   <div class="order d-flex justify-content-between"> 
+                        <div class="order-type">
+                            <label for="orderType">Order Type</label>
+                            <select class=" menu__select" type="text" placeholder="Dine In">
+                                <option value="eatIn">Dine In</option>
+                                <option value="eatIn">Take away</option>
+                            </select>
+                        </div>
+                        <div class="table-no">
+                            <label for="cvv">Table no.</label>
+                            <input type="password" class="cvv__input" placeholder="140">
+                        </div>
+                    </div> 
+
+                    <div class="payment-methods-box__buttons d-flex justify-content-between">
+                        <button class="cancel" type="button">Cancel</button>
+                        <button class="confirm-payment" type="submit">Confirm Payment</button>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="my.js"></script>
+</body>
+
+</html>
